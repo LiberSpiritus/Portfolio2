@@ -1,0 +1,402 @@
+:root {
+  /* Font size */
+  --font-big: 70px; /*h1*/
+  --font-large: 56px; /*h2*/
+  --font-stay: 40px; /*h4 - staywithus 예외*/
+  --font-medium: 26px; /*h3*/
+  --font-regular: 22px; /*p*/
+  --font-small: 14px; /*staywithus 가장 작은 글씨*/
+
+  /* Font weight */
+  --weight-bold: 700;
+  --weight-semi-bold: 600;
+  --weight-regular: 400;
+
+  --color-blue: #3040c4;
+  --color-white: #fff;
+  --color-purple: #3040c4;
+  --color-palepink: #fdded8;
+  --color-gray: #f4f5f7;
+  --color-green: #009b4d;
+  --color-pacificblue: #0189d1;
+
+  --btn-border-radius: 2px;
+  --size-border-radius: 5px;
+}
+
+/*공통*/
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  font-size: var(--font-regular);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: var(--btn-border-radius);
+  padding: 20px 35px;
+  text-align: center;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  margin: 0;
+  cursor: default;
+}
+
+h1 {
+  font-size: var(--font-big);
+  line-height: 1.028571428571429;
+  letter-spacing: -0.05em;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: var(--font-large);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  margin-top: 0px;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-size: var(--font-medium);
+  line-height: 1.307692307692308;
+  letter-spacing: -0.04em;
+  margin-bottom: 18px;
+}
+h4 {
+  font-size: var(--font-stay);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin-bottom: 18px;
+}
+
+p {
+  font-size: var(--font-regular);
+  line-height: 1.454545454545455;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+p.fsmall {
+  font-size: var(--font-small);
+  line-height: 1.714285714285714;
+  letter-spacing: 0;
+}
+
+strong {
+  letter-spacing: -0.03em;
+}
+
+p + button {
+  margin-top: 30px;
+}
+
+.small-title {
+  font-size: var(--font-regular);
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0px 10px;
+}
+
+.btn-purple {
+  background-color: var(--color-purple);
+  color: var(--color-white);
+}
+.btn-white {
+  background-color: var(--color-white);
+  color: var(--color-purple);
+}
+
+.flex-box {
+  display: flex;
+}
+
+input[type='text'] {
+  font-size: var(--font-regular);
+  line-height: 1.454545454545455;
+  letter-spacing: -0.01em;
+  padding: 10px 15px;
+  border: none;
+  background: #fff;
+}
+
+.b-underline {
+  border-bottom: 1px solid var(--color-blue);
+  color: var(--color-blue);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+/*공통 끝*/
+
+/* 1. header */
+
+#header article.top {
+  padding: 125px 0px;
+  background-color: var(--color-palepink);
+  text-align: center;
+}
+
+/* #header article.top p {
+  margin-bottom: 20px;
+} */
+
+#header article.top .btn-purple {
+  margin-right: 15px;
+}
+
+#header article.bottom {
+  padding: 60px 0px;
+  background-color: var(--color-gray);
+}
+
+#header article.bottom .flex-box div:first-child {
+  margin-right: 140px;
+}
+
+/* 2. program */
+
+#program {
+  text-align: center;
+  padding-top: 60px;
+}
+
+#program .small-title {
+  color: var(--color-green);
+}
+
+#program .img_box {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 40px;
+}
+
+#program .img_box div:nth-of-type(2) {
+  background-color: var(--color-purple);
+}
+
+#program .img_box .program__border {
+  border-radius: var(--size-border-radius);
+  border: 2px solid #ededed;
+  -webkit-box-shadow: 5px 5px 5px -5px #000000;
+  box-shadow: 5px 5px 5px -5px #000000;
+  padding: 25px 0px;
+}
+
+#program .img_box .program__border > div {
+  margin: 0px 10px;
+  position: relative;
+}
+
+#program .img_box .program__border:nth-child(2) strong {
+  color: var(--color-white);
+}
+
+#program .img_box .program__border:nth-child(2) i {
+  color: var(--color-white);
+  position: absolute;
+  left: 15px;
+}
+
+#program .img_box img {
+  max-width: 60%;
+}
+
+#program .img_box strong {
+  font-size: 20px;
+  display: block;
+}
+
+/* 3. curriculum */
+
+#curriculum {
+  margin: 60px 0px;
+}
+
+#curriculum .small-title {
+  color: var(--color-pacificblue);
+}
+
+#curriculum h2 + p {
+  letter-spacing: -0.1px;
+}
+
+#curriculum .flex-box > div:nth-of-type(1) {
+  flex: 1.3;
+}
+
+#curriculum .flex-box > div:nth-of-type(2) {
+  flex: 1;
+}
+
+#curriculum .flex-box p {
+}
+
+#curriculum img,
+#staywithus img {
+  max-width: 100%;
+}
+
+#curriculum .btn-purple {
+  margin: 45px 0px;
+}
+
+/* 4. staywithus */
+
+#staywithus {
+  background: #f2f8fa;
+  padding: 125px 0px;
+}
+
+#staywithus .flex-box div:first-child {
+  margin-right: 85px;
+}
+
+#staywithus .flex-box div:last-child .flex-box {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+#staywithus .flex-box div:last-child .flex-box input {
+  width: 59%;
+  margin-right: 10px;
+}
+#staywithus .flex-box div:last-child .flex-box button {
+  width: 41%;
+}
+
+/* 5. footer */
+
+#footer {
+  margin: 30px 0px;
+}
+
+#footer ul li {
+  padding-right: 15px;
+}
+
+#footer ul li:last-child {
+  padding-right: 0;
+}
+
+@media (max-width: 768px) {
+  /* .container {
+    max-width: 720px;
+  } */
+
+  :root {
+    /* Font size */
+    --font-big: 40px;
+    --font-large: 34px;
+    --font-stay: 32px;
+    --font-medium: 22px;
+    --font-regular: 16px;
+    --font-small: 13px;
+  }
+
+  h1 {
+    line-height: 1;
+  }
+
+  h2 {
+    line-height: 1.058823529411765;
+  }
+
+  h3 {
+    line-height: 1.363636363636364;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+
+  p.fsmall {
+    line-height: 1.538461538461538;
+  }
+
+  #header article.bottom .flex-box {
+    flex-direction: column;
+  }
+
+  #program {
+    text-align: left;
+  }
+
+  #program .img_box {
+    flex-direction: column;
+  }
+
+  #program .img_box .program__border {
+    padding: 40px 0px;
+    margin-bottom: 25px;
+  }
+
+  #program .img_box .program__border:last-child {
+    margin: 0;
+  }
+
+  #program .img_box img {
+  }
+
+  #program .img_box strong {
+    font-size: 18px;
+  }
+
+  #curriculum .flex-box > div:nth-of-type(2) {
+    display: none;
+  }
+
+  #curriculum h2 + p {
+    letter-spacing: normal;
+  }
+
+  #staywithus {
+    text-align: center;
+    padding: 65px 0px;
+  }
+
+  #staywithus img {
+    max-width: 50%;
+  }
+
+  #staywithus .flex-box {
+    flex-direction: column;
+  }
+
+  #staywithus .flex-box div:first-child {
+    margin: 0;
+  }
+
+  #staywithus .flex-box div:last-child .flex-box input,
+  #staywithus .flex-box div:last-child .flex-box button {
+    width: 100%;
+    margin: 0;
+  }
+
+  #footer ul {
+    flex-direction: column;
+  }
+
+  #footer ul li {
+    padding-right: 0;
+    padding-bottom: 15px;
+  }
+
+  #footer ul li:last-child {
+    padding-bottom: 0;
+  }
+}
