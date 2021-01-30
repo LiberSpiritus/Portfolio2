@@ -1,5 +1,7 @@
 # Portfolio2
 
+링크 : https://liberspiritus.github.io/Portfolio2/
+
 두번쨰 포트폴리오이며, 시안은 강의에서 제공 해준 파일을 참고하였고
 마찬가지로 반응형 페이지 작업을 했습니다.
 
